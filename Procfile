@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath post_blog post_blog_project.wsgi

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="title">Posts:</h1>
+    {% for post in posts %}
+    <strong>Title: {{ post.title }}</strong>
+    <p>Author: {{ post.author }}</p>
+    <small>Date: {{ post.timestamp }}</small>
+    <p>Description: {{ post.body }}</p>
+    <hr>
+    {% endfor %}
+
+<h1 class="subtitle">Add Post:</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="field">
+        <input class="input" type="text" placeholder="add your title">
+        <input class="input" type="text" placeholder="add the author">
+        <input class="input" type="text" placeholder="add your description">
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <button class="button is-success">Submit</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

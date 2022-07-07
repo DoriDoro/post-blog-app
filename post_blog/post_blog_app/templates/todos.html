@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="title">Todos:</h1>
+    {% for todo in todos %}
+    <strong>Title: {{ todo.title }}</strong>
+    <small> - Date: {{ todo.timestamp }}</small>
+    <p><strong>Description:</strong> {{ todo.body }}</p>
+    <p>Is done: {{ todo.is_done }}</p>
+    <hr>
+    {% endfor %}
+
+{% endblock %}
