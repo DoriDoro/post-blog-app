@@ -17,4 +17,4 @@ A simple blog application with the possibility to write comments to every blog. 
 
 
 ## Heroku website URL:
-
+https://blog-todo-app.herokuapp.com
